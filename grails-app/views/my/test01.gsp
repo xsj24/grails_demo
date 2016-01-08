@@ -4,24 +4,6 @@
     <meta name="layout" content="main" />
 
     <script type="text/javascript" src="../js/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            $("form").submit(function(event){
-                var form = $(this);
-                console.info($("form").serialize())
-                $.ajax({
-                    type : form.attr('method'),
-                    url : form.attr('action'),
-                    data : $("form").serialize(),
-                    datatype: 'json'
-                    success: function(data) {
-
-                    }
-                });
-                event.preventDefault();
-            });
-        });
-    </script>
     <style type="text/css" media="screen">
     #nav {
         margin-top:20px;
@@ -93,11 +75,41 @@
     <h1>缓冲测试</h1>
 
     <div id="controllerList" class="dialog">
-        <g:form action="test02">
-            <g:textField name="data" />
-            <g:actionSubmit value="提交到test02"/>
-        </g:form>
+        <div>
+            <g:form id="form" onsubmit="return submitForm()" action="test02">
+                <g:textField name="data" />
+                <g:actionSubmit value="提交到test02"/>
+            </g:form>
+        </div>
+        <div>
+            <button onclick="check()" title="测试">测试</button>
+        </div>
     </div>
 </div>
+
+<script type="text/javascript">
+
+    function submitForm() {
+        var postData = $('#form').serialize();
+        console.info(postData);
+        var url = $('#form').attr('action') ;
+        console.info(url)
+        $.ajax({
+            type : 'POST',
+            url : 'test02',
+            data : postData,
+            datatype: 'json',
+            success: function(response) {
+                console.info(response);
+            }
+        });
+        return false;
+    }
+
+    function check() {
+        var obj = $("#form");
+        console.info(obj.serialize());
+    }
+</script>
 </body>
 </html>

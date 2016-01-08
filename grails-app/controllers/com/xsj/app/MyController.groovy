@@ -9,10 +9,10 @@ class MyController {
     }
 
     def test01 = {
+
     }
 
     def test02 = {
-        Thread.sleep(2000)
         println params.data
         render([name: 'xsj'] as JSON)
     }
