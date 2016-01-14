@@ -3,7 +3,7 @@ package com.xsj.app
 class Book {
 
     String title
-    String name
+    String lang
     double price
 
     static mapping = {
@@ -12,7 +12,7 @@ class Book {
 
     static constraints = {
         title(blank: false, nullable: false)
-        name(blank: false, nullable: false)
+        lang(blank: false, nullable: false)
         price(nullable: false)
     }
 }

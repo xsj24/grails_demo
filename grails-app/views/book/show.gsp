@@ -37,9 +37,9 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="book.name.label" default="Name" /></td>
+                            <td valign="top" class="name"><g:message code="book.lang.label" default="Lang" /></td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: bookInstance, field: "name")}</td>
+                            <td valign="top" class="value">${fieldValue(bean: bookInstance, field: "lang")}</td>
                             
                         </tr>
                     

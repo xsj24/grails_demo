@@ -39,10 +39,10 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="name"><g:message code="book.name.label" default="Name" /></label>
+                                    <label for="lang"><g:message code="book.lang.label" default="Lang" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: bookInstance, field: 'name', 'errors')}">
-                                    <g:textField name="name" value="${bookInstance?.name}" />
+                                <td valign="top" class="value ${hasErrors(bean: bookInstance, field: 'lang', 'errors')}">
+                                    <g:textField name="lang" value="${bookInstance?.lang}" />
                                 </td>
                             </tr>
                         

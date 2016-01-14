@@ -26,7 +26,7 @@
                         
                             <g:sortableColumn property="title" title="${message(code: 'book.title.label', default: 'Title')}" />
                         
-                            <g:sortableColumn property="name" title="${message(code: 'book.name.label', default: 'Name')}" />
+                            <g:sortableColumn property="lang" title="${message(code: 'book.lang.label', default: 'Lang')}" />
                         
                             <g:sortableColumn property="price" title="${message(code: 'book.price.label', default: 'Price')}" />
                         
@@ -40,7 +40,7 @@
                         
                             <td>${fieldValue(bean: bookInstance, field: "title")}</td>
                         
-                            <td>${fieldValue(bean: bookInstance, field: "name")}</td>
+                            <td>${fieldValue(bean: bookInstance, field: "lang")}</td>
                         
                             <td>${fieldValue(bean: bookInstance, field: "price")}</td>
                         

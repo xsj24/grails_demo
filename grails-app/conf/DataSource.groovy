@@ -1,8 +1,7 @@
 dataSource {
     pooled = true
-    driverClassName = "org.hsqldb.jdbcDriver"
-    username = "sa"
-    password = ""
+    driverClassName = "com.mysql.jdbc.Driver"
+    dialect = "org.hibernate.dialect.MySQL5InnoDBDialect"
 }
 hibernate {
     cache.use_second_level_cache = true
@@ -14,7 +13,10 @@ environments {
     development {
         dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop','update'
-            url = "jdbc:hsqldb:mem:devDB"
+            // url http://blog.csdn.net/afgasdg/article/details/6941712
+            url = "jdbc:mysql://localhost/grails01?useUnicode=yes&characterEncoding=UTF-8"
+            username = "test"
+            password = "test"
         }
     }
     test {
